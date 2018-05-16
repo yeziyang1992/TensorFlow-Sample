@@ -23,7 +23,8 @@ def KMeansCluster(vectors, noofclusters):
     vector_indices = list(range(len(vectors)))
     shuffle(vector_indices)
     #计算图
-    #我们创建了一个默认的计算流的图用于整个算法中，这样就保证了当函数被多次调用      #时，默认的图并不会被从上一次调用时留下的未使用的OPS或者Variables挤满
+    #我们创建了一个默认的计算流的图用于整个算法中，这样就保证了当函数被多次调用      
+    #时，默认的图并不会被从上一次调用时留下的未使用的OPS或者Variables挤满
     graph = tf.Graph()
     with graph.as_default():
         #计算的会话
